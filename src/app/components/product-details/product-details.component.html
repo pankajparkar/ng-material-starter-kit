@@ -1,0 +1,11 @@
+<button mat-raised-button routerLink="/product" color="primary">
+  Product List
+</button>
+
+<mat-card *ngIf="product$ | async as product">
+  <mat-card-title>{{ product.title }}</mat-card-title>
+  <mat-card-subtitle>Price:- {{ product.price }}</mat-card-subtitle>
+  <img mat-card-image [src]="product.image" [alt]="product.description">
+  <mat-card-content>
+  </mat-card-content>
+</mat-card>
