@@ -1,0 +1,19 @@
+<form [formGroup]="addProductForm" (ngSubmit)="onAddProductFormSubmitted(addProductForm)">
+  <div>
+    <mat-form-field appearance="fill">
+      <mat-label>Title</mat-label>
+      <input matInput type="text" placeholder="Title" formControlName="title" required>
+      <mat-error *ngIf="addProductForm.get('title')!.invalid">title is invalid</mat-error>
+    </mat-form-field>
+  </div>
+  <div>
+    <mat-form-field appearance="fill">
+      <mat-label>Price</mat-label>
+      <input matInput type="text" placeholder="Price" formControlName="price" required>
+      <mat-error *ngIf="addProductForm.get('price')!.invalid">price is invalid</mat-error>
+    </mat-form-field>
+  </div>
+  <div>
+    <button type="submit" mat-raised-button color="primary">Submit</button>
+  </div>
+</form>
