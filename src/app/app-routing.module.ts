@@ -13,7 +13,8 @@ import { ProductDetailsComponentModule } from './components/product-details/prod
     RouterModule.forRoot([
       { path: 'product', component: ProductListComponent },
       { path: 'add-product', component: AddProductComponent },
-      { path: 'product/:id', component: ProductDetailsComponent }
+      { path: 'product/:id', component: ProductDetailsComponent },
+      { path: '**', redirectTo: 'product' },
     ]),
     ProductListComponentModule,
     ProductsServiceModule,

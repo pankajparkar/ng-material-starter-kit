@@ -1,4 +1,5 @@
-<form [formGroup]="addProductForm" (ngSubmit)="onAddProductFormSubmitted(addProductForm)">
+<form class="add-product-form" [formGroup]="addProductForm" (ngSubmit)="onAddProductFormSubmitted(addProductForm)">
+  <h1>Add Product</h1>
   <div>
     <mat-form-field appearance="fill">
       <mat-label>Title</mat-label>
@@ -14,6 +15,8 @@
     </mat-form-field>
   </div>
   <div>
-    <button type="submit" mat-raised-button color="primary">Submit</button>
+    <button type="submit" mat-raised-button color="primary" [disabled]="addProductForm.invalid">
+      Submit
+    </button>
   </div>
 </form>
