@@ -1,11 +1,13 @@
 <mat-toolbar color="primary">
   <mat-toolbar-row>
-    <span>Lowgular</span>
+    <span class="app-name" routerLink="/product">
+      Lowgular
+    </span>
     &nbsp;
-    <button mat-stroked-button routerLink="/product">
+    <button routerLinkActive="active" mat-button routerLink="/product">
       Product List
     </button>
-    <button mat-stroked-button routerLink="/add-product">
+    <button routerLinkActive="active" mat-button routerLink="/add-product">
       Add Product
     </button>
   </mat-toolbar-row>
