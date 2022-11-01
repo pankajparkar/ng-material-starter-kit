@@ -7,6 +7,7 @@ import { ProductListComponentModule } from './components/product-list/product-li
 import { ProductsServiceModule } from './services/products.service-module';
 import { AddProductComponentModule } from './components/add-product/add-product.component-module';
 import { ProductDetailsComponentModule } from './components/product-details/product-details.component-module';
+import {MAT_SNACK_BAR_DEFAULT_OPTIONS, MatSnackBarConfig} from "@angular/material/snack-bar";
 
 @NgModule({
   imports: [
@@ -20,6 +21,9 @@ import { ProductDetailsComponentModule } from './components/product-details/prod
     ProductsServiceModule,
     AddProductComponentModule,
     ProductDetailsComponentModule
+  ],
+  providers: [
+    {provide: MAT_SNACK_BAR_DEFAULT_OPTIONS, useValue: {duration: 2500}}
   ],
   exports: [RouterModule]
 })
